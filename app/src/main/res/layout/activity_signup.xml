@@ -7,24 +7,24 @@
     tools:context=".LoginActivity"
     android:background="@drawable/bluegradback">
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:gravity="center"
-       android:id="@+id/firstlinear"
-       >
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:src="@drawable/ah_tech"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/logo"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/firstlinear"
+        >
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ah_tech"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/logo"
 
-        />
+            />
 
 
-   </LinearLayout>
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
         android:id="@+id/signintxt"
         android:layout_below="@+id/firstlinear"
         android:layout_centerHorizontal="true"
-        android:text="Sign in"
+        android:text="Sign up"
         android:textStyle="bold"
         android:textSize="25dp"
         android:textColor="#F9FBFB"
@@ -46,7 +46,7 @@
         android:layout_centerHorizontal="true"
         android:background="#30ffffff"
         android:padding="10dp"
-        android:hint="email"
+        android:hint="username"
         android:textColorHint="@color/white"
         android:drawableLeft="@drawable/useri"
 
@@ -57,35 +57,50 @@
 
 
         />
-
     <EditText
-        android:id="@+id/passwordedittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/emailedittext"
+        android:id="@+id/passwordedittext"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
         android:background="#30ffffff"
-        android:drawableLeft="@drawable/lock"
-        android:drawablePadding="20dp"
-
-        android:hint="password"
-        android:inputType="textPassword"
-
         android:padding="10dp"
+        android:hint="password"
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/lock"
+        android:inputType="textPassword"
         android:textColor="@color/black"
-        android:textColorHint="@color/white" />
+        android:drawablePadding="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_margin="15dp"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordedittext"
+        android:id="@+id/confirmpasswordedittext"
+        android:layout_centerHorizontal="true"
+        android:background="#30ffffff"
+        android:padding="10dp"
+        android:hint="confirmation "
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/lock"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_margin="15dp"
+
+        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/loginbtn"
-        android:layout_below="@+id/passwordedittext"
+        android:id="@+id/signupbtn"
+        android:layout_below="@+id/confirmpasswordedittext"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#32DCE6"
-        android:text="LOGIN"
+        android:text="SIGN UP"
         android:textStyle="bold"
         android:layout_marginTop="15dp"
         />
@@ -93,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/secondlinear"
-        android:layout_below="@+id/loginbtn"
+        android:layout_below="@+id/signupbtn"
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:layout_centerHorizontal="true">
@@ -101,15 +116,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="you don't have an account? "
+            android:text="you already have an account? "
             android:textColor="@color/white"
             android:textStyle="bold"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/signuptext"
-            android:text="sign up"
+            android:id="@+id/logintextview"
+            android:text="login"
             android:textColor="#3751E4"
             android:textStyle="bold"
             android:layout_marginLeft="5dp"
@@ -117,47 +132,7 @@
 
 
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/signupwith"
-        android:text="or sign up with:"
-        android:layout_above="@+id/iconslinear"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp"
-        />
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/iconslinear"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
-        android:layout_centerHorizontal="true"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/gmailicon"
-            />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icons8facebook"
-            />
-        <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icons8google"
-        />
 
-        <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icons8instagram"
-        />
 
-    </LinearLayout>
 
 </RelativeLayout>
