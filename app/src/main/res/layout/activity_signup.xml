@@ -46,7 +46,7 @@
         android:layout_centerHorizontal="true"
         android:background="#30ffffff"
         android:padding="10dp"
-        android:hint="username"
+        android:hint="email"
         android:textColorHint="@color/white"
         android:drawableLeft="@drawable/useri"
 
